@@ -8,6 +8,11 @@ variable "region" {
   default = "South Central US"
 }
 
+variable "resource_group" {
+  type    = "string"
+  default = "Ether"
+}
+
 variable "prefix" {
   type    = "string"
   default = "ether-"

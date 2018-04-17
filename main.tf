@@ -8,7 +8,7 @@ resource "random_id" "key" {
 
 # create a resource group
 resource "azurerm_resource_group" "ether" {
-  name     = "Ether"
+  name     = "${var.resource_group}"
   location = "${var.region}"
 }
 
