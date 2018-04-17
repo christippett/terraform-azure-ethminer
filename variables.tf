@@ -22,3 +22,8 @@ variable "instance_count" {
   type    = "string"
   default = "7"
 }
+
+variable "instance_type" {
+  type    = "string"
+  default = "Standard_NC6"
+}

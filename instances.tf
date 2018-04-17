@@ -37,7 +37,7 @@ resource "azurerm_virtual_machine" "ether" {
   location              = "${var.region}"
   resource_group_name   = "${azurerm_resource_group.ether.name}"
   network_interface_ids = ["${element(azurerm_network_interface.ether.*.id, count.index)}"]
-  vm_size               = "Standard_NC6"                                                    # Standard_A0
+  vm_size               = "${var.instance_type}"
   depends_on            = ["azurerm_storage_container.ether"]
 
   storage_image_reference {
